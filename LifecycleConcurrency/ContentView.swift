@@ -2,20 +2,27 @@
 //  ContentView.swift
 //  LifecycleConcurrency
 //
-//  Created by Natalia on 11/26/24.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            TabView {
+                FirstTabView()
+                    .tabItem {
+                        Image(systemName: "01.circle")
+                        Text("First")
+                    }
+
+                SecondTabView()
+                    .tabItem {
+                        Image(systemName: "02.circle")
+                        Text("Second")
+                    }
+            }
         }
-        .padding()
     }
 }
 
